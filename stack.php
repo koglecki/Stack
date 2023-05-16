@@ -57,16 +57,17 @@ while(!$exit) {
     echo "3. Print stack\n";
     echo "other key -> exit\n\n";
     $option = readline('Your choice: ');
-    system('clear');    //system('cls') for windows
+    echo "\n --------------------------- \n";
     switch($option) {
         case 1:
             $value = readline('Give the value of the new element: ');
+            echo "\n";
             $stack->push($value);
             break;
         case 2:
             $removed_element = $stack->pop();
             if ($removed_element != null)
-                echo "Deleted element: ". $removed_element;
+                echo "Deleted element: ". $removed_element. "\n";
             break;
         case 3:
             $stack->printStack();
